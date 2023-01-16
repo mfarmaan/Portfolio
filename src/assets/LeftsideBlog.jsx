@@ -30,8 +30,8 @@ function LeftsideBlog() {
                                             <div className='case-study-card1 h-50 '>
                                                 <img className='blog__card-div-img ' src={BlogDemo} width="100%" alt="" />
                                                 <div id='blog__card-lable' className='blog_card-author-details'>
-                                                    <label for="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
-                                                    <h1 className='text-white text-start'>The Future of UI/UX: Predictions and Best Practices for 2023</h1>
+                                                    <label htmlFor="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
+                                                    <h1 className='text-white text-start'>The Future of UI/UX: Predictions and Best Practices htmlFor 2023</h1>
                                                     <div className='blog__card-date-time'>
                                                         <p className=''>By: Author</p>
                                                         <p className=''>Posted by: 20-01-2023</p>
@@ -48,8 +48,8 @@ function LeftsideBlog() {
                                             <div className='case-study-card1 h-50 '>
                                                 <img className='blog__card-div-img ' src={BlogDemo} width="100%" alt="" />
                                                 <div id='blog__card-lable' className='blog_card-author-details'>
-                                                    <label for="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
-                                                    <h1 className='text-white text-start'>The Future of UI/UX: Predictions and Best Practices for 2023</h1>
+                                                    <label htmlFor="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
+                                                    <h1 className='text-white text-start'>The Future of UI/UX: Predictions and Best Practices htmlFor 2023</h1>
                                                     <div className='blog__card-date-time'>
                                                         <p className=''>By: Author</p>
                                                         <p className=''>Posted by: 20-01-2023</p>
@@ -66,8 +66,8 @@ function LeftsideBlog() {
                                             <div className='case-study-card1 h-50 '>
                                                 <img className='blog__card-div-img ' src={BlogDemo} width="100%" alt="" />
                                                 <div id='blog__card-lable' className='blog_card-author-details'>
-                                                    <label for="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
-                                                    <h1 className='text-white text-start'>The Future of UI/UX: Predictions and Best Practices for 2023</h1>
+                                                    <label htmlFor="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
+                                                    <h1 className='text-white text-start'>The Future of UI/UX: Predictions and Best Practices htmlFor 2023</h1>
                                                     <div className='blog__card-date-time'>
                                                         <p className=''>By: Author</p>
                                                         <p className=''>Posted by: 20-01-2023</p>
@@ -92,8 +92,8 @@ function LeftsideBlog() {
                                 <div className='case-study-card1 h-50 '>
                                     <img className='blog__card-div-img ' src={BlogDemo} width="100%" alt="" />
                                     <div id='blog__card-lable' className='blog_card-author-details'>
-                                        <label for="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
-                                        <h1 className='text-white text-start'>The Future of UI/UX: Predictions and Best Practices for 2023</h1>
+                                        <label htmlFor="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
+                                        <h1 className='text-white text-start'>The Future of UI/UX: Predictions and Best Practices htmlFor 2023</h1>
                                         <div className='blog__card-date-time'>
                                             <p className=''>By: Author</p>
                                             <p className=''>Posted by: 20-01-2023</p>

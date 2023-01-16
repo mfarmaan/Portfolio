@@ -1,16 +1,14 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
 import './Media.css'
 import './index.css'
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-
-
-import styled, { css } from 'styled-components'
-
-
 import Layout from './Home/Layout';
 import LeftsideBlog from './assets/LeftsideBlog';
 import Readingblog from './component/Readingblog';
+// import Dashboard from './Admin/Dashboard';
+// import Login from './Admin/Login';
+import Register from './Admin/Register';
 function App() {
   return (
     <>
@@ -19,6 +17,10 @@ function App() {
           <Route path="/" exact element={<Layout />} />
           <Route path="/about" element={<LeftsideBlog />} />
           <Route path="/readingblog" element={<Readingblog />} />
+          <Route path="/register" element={<Register />} />
+          {/* <Route path="/" element={<Dashboard />} />
+         
+          <Route path="/login" element={<Login />} /> */}
         </Routes>
       </Router>
 

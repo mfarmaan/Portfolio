@@ -28,10 +28,10 @@ function Footer() {
                             <div>
                                 <h4 className="text-white text-white mb-4">Pages</h4>
                                 <div className="d-flex flex-column flex-wrap gap-4 ">
-                                    <a href="" className="text-white">Home</a>
-                                    <a href="" className="text-white">About</a>
-                                    <a href="" className="text-white">Resume</a>
-                                    <a href="" className="text-white">Contact</a>
+                                    <a className="text-white">Home</a>
+                                    <a className="text-white">About</a>
+                                    <a className="text-white">Resume</a>
+                                    <a className="text-white">Contact</a>
                                 </div>
                             </div>
                         </div>
@@ -39,10 +39,10 @@ function Footer() {
                             <div>
                                 <h4 className="text-white text-white mb-4">Social Media</h4>
                                 <div className="d-flex flex-column flex-wrap gap-4 ">
-                                    <a href="" className="text-white">Instagram</a>
-                                    <a href="" className="text-white">Facebook</a>
-                                    <a href="" className="text-white">Behance</a>
-                                    <a href="" className="text-white">Linked</a>
+                                    <a className="text-white">Instagram</a>
+                                    <a className="text-white">Facebook</a>
+                                    <a className="text-white">Behance</a>
+                                    <a className="text-white">Linked</a>
                                 </div>
                             </div>
                         </div>

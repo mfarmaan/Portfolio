@@ -150,7 +150,7 @@ code {
   height: 100%;
   width: 100%;
   border-radius: 19px;
-  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #3e6aff 100%, rgba(217, 217, 217, 0) 100%), url();
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #3e6aff 100%, rgba(217, 217, 217, 0) 100%);
   border-radius: 19px;
   transition: all 1s ease-in-out;
   cursor: pointer;
