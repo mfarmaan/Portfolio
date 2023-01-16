@@ -16,7 +16,7 @@ function Header() {
         <div>
             <div className='admin__header'>
                 <div className="container">
-                    <div className="row justify-content-between">
+                    <div className="row justify-content-between align-items-center">
                         <div className=" col-6 admin__headers ">
                             <div className="d-flex align-items-center">
                                 <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">

@@ -395,3 +395,26 @@ a:hover {
     font-size: 75%;
   }
 }
+@media (max-width: 768px) {
+  .admin__headers_sec2 p {
+    display: none;
+  }
+  .admin__headers_sec2 img {
+    margin-left: auto;
+  }
+}
+@media (max-width: 450px) {
+  .admin__headers h1 {
+    font-size: 6vw;
+  }
+  .admin__headers div {
+    gap: 1.3125rem;
+  }
+  .admin__headers_sec2 p {
+    display: none;
+  }
+  .admin__headers_sec2 img {
+    width: 15vw;
+    height: 15vw;
+  }
+}

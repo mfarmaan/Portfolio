@@ -59,7 +59,7 @@ code {
   border-radius: 3rem;
 }
 .blog__card-div-img {
-  height: 18.75rem;
+  height: 20rem;
   border-radius: 3rem;
   object-fit: cover;
 }
@@ -381,7 +381,7 @@ code {
 
 .admin__header {
   background-color: #5252fd;
-  padding: 2.5625rem;
+  padding: 1rem;
   width: 100%;
 }
 .admin__headers h1 {
