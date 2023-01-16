@@ -6,10 +6,51 @@
   font-size: 1rem;
   transition: all 0.8s ease-in-out;
 }
-body {
-  padding-top: 1.25rem;
+h2 {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  margin: 0;
+  color: #063658;
 }
+.addmin__active h2 {
+  color: #5252fd;
+}
+h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 58.1053px;
+  line-height: 87px;
 
+  color: #063658;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+h5 span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38.7368px;
+  line-height: 58px;
+
+  color: #5252fd;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
 .nav-link.active {
   font-family: "Poppins";
   font-style: normal;
@@ -340,4 +381,17 @@ a:hover {
   line-height: 60px;
   /* or 125% */
   text-transform: capitalize;
+}
+.menu_tabs {
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+.column-gap-1 {
+  column-gap: 4.125rem;
+  gap: 4.125rem;
+}
+@media (max-width: 960px) {
+  * {
+    font-size: 50%;
+  }
 }
