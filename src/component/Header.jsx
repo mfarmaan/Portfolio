@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import { IoIosPeople, IoMdBusiness } from 'react-icons/io';
+import { FiTrendingUp } from 'react-icons/fi';
+import { BiCategoryAlt } from 'react-icons/bi';
+import { CgDesignmodo } from 'react-icons/cg';
+import { FaAward } from 'react-icons/fa';
 function Header() {
     const navigate = useNavigate();
 
@@ -20,23 +24,24 @@ function Header() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page">Portfolio</a>
+                            <a className="nav-link active" aria-current="page"><IoIosPeople size={24} /> JOIN US</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" >About</a>
+                            <a className="nav-link text-red" ><FiTrendingUp size={24} color="red" /> Trending</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" >Blog</a>
+                            <a className="nav-link" ><FaAward size={24} /> Weekly UI UX Designs</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link">Resume/CV</a>
+                            <a className="nav-link"><IoMdBusiness size={24} /> Business</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" >Case Studies</a>
+                            <a className="nav-link" > <CgDesignmodo size={24} /> Designers</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" >Contact form</a>
+                            <a className="nav-link" ><BiCategoryAlt size={24} /> Categories</a>
                         </li>
+
                     </ul>
 
                 </div>

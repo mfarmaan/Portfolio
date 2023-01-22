@@ -61,6 +61,7 @@ code {
 .blog__card-div-img {
   height: 20rem;
   border-radius: 3rem;
+  margin-bottom: 1rem;
   object-fit: cover;
 }
 .blog_card-author-details {
@@ -94,6 +95,7 @@ code {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: flex-start;
   padding: 0rem;
   gap: 1.0625rem;
   font-family: "Poppins";
@@ -135,6 +137,9 @@ code {
   flex-grow: 0;
   background: #c83f3f;
   border-radius: 0.3125rem;
+}
+.menu_tabs {
+  cursor: pointer;
 }
 
 .case-study-card1 {
@@ -476,4 +481,91 @@ code {
 }
 .recent__post__slider {
   margin-bottom: 1.5rem;
+}
+.Admin__Btn {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 9.21px;
+
+  width: 233.98px;
+  height: 53.72px;
+
+  border: 0.92054px solid #097aff;
+  border-radius: 19.3088px;
+  list-style: none;
+  text-decoration: none;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.7286px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  color: #097aff;
+
+  /* Inside auto layout */
+  background-color: transparent;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.admin__addpost-btn,
+.admin__delete-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 9.21px;
+  border-radius: 19.3088px;
+
+  /* text style */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.7286px;
+  line-height: 22px;
+  /* identical to box height */
+  width: 100%;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.admin__addpost-btn {
+  background: #097aff;
+}
+.admin__delete-btn {
+  background: #ff0909;
+  border: none;
+}
+.Addpost__image {
+  height: 152px;
+  border-radius: 13.5515px;
+  margin-bottom: 16px;
+}
+.Addpost__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 13.5515px;
+}
+/* Colors */
+.text-red {
+  color: red !important;
+}
+.text-blue0 {
+  color: #063658 !important;
 }

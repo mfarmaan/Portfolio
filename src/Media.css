@@ -1,7 +1,6 @@
 @media (max-width: 450px) {
     * {
         font-size: 0.9rem;
-        line-height: 0.9rem;
     }
 
     .sm-p-1 {

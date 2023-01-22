@@ -1,29 +1,40 @@
 import React from 'react'
-import Header from './Common/Header'
+// import Header from './Common/Header';
 import ManageUser from './Admin assets/ManageUser'
 import Slider from './Admin assets/Slider'
 import usericon from '../img/users-three-thin.png'
+import manageyourpost from '../img/file-icons_postscript.png'
 import { useNavigate } from 'react-router-dom'
 import BlogDemo from '../img/blog-demo.png'
+import Header from './Common/Header'
+
 
 function Dashboard() {
+
     const navigate = useNavigate();
 
-    const navigateTgo = () => {
+    const manageuser = () => {
         navigate('/manageuser')
+    }
+    const managePost = () => {
+        navigate('/managepost')
+    }
+    const Integrations = () => {
+        navigate('/addon')
     }
     return (
         <>
-            <Header />
+
             <div className='praent-div'>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4">
                             <ManageUser
-                                number="100+"
-                                width="196"
+                                title="Manage users"
+                                centerTitle="100+"
+                                imgwidth="196"
                                 src={usericon}
-                                navigate={navigateTgo} />
+                                navigate={manageuser} />
                         </div>
                         <div className="col-md-8">
                             <div className='recent__post__slider'>
@@ -50,10 +61,23 @@ function Dashboard() {
                     </div>
                     <div className="row">
                         <div className="col-md-6">
-
+                            <ManageUser
+                                title="Manage your posts"
+                                centerTitle="Lorem ipsum dolor sit amet consectetur."
+                                navigate={managePost}
+                                classText="text-center"
+                                titleImage={manageyourpost}
+                                classTitleImage="53" />
                         </div>
                         <div className="col-md-6">
-
+                            <ManageUser
+                                title="Integrations Addon"
+                                centerTitle="1000+"
+                                navigate={Integrations}
+                                classText="text-center"
+                                titleImage={manageyourpost}
+                                classTitleImage="53"
+                                height="380px" />
                         </div>
                     </div>
                 </div>

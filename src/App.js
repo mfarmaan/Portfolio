@@ -7,7 +7,9 @@ import Layout from './Home/Layout';
 import LeftsideBlog from './assets/LeftsideBlog';
 import Readingblog from './component/Readingblog';
 import Register from './Admin/Register';
-import Dashboard from './Admin/Dashboard';
+// import Dashboard from './Admin/Dashboard';
+// import ManagePost from './Admin/pages/ManagePost';
+import Index from './Admin/Index';
 function App() {
   return (
     <>
@@ -17,9 +19,10 @@ function App() {
           <Route path="/about" element={<LeftsideBlog />} />
           <Route path="/readingblog" element={<Readingblog />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/admin" element={<Dashboard />} />
+          <Route path="/admin" element={<Index />} />
+          <Route path="/managepost" element={<Index />} />
 
-          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="*" element="no page found" />
         </Routes>
       </Router>
 

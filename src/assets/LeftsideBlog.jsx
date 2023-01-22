@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import BlogDemo from '../img/blog-demo.png'
+import Card from './pages/Card';
 
 function LeftsideBlog() {
     const navigate = useNavigate();
@@ -63,7 +64,7 @@ function LeftsideBlog() {
                                 <div className="carousel-item">
                                     <a onClick={navigateToRead}>
                                         <div className="blog__card-div ">
-                                            <div className='case-study-card1 h-50 '>
+                                            <div className=' '>
                                                 <img className='blog__card-div-img ' src={BlogDemo} width="100%" alt="" />
                                                 <div id='blog__card-lable' className='blog_card-author-details'>
                                                     <label htmlFor="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
@@ -87,23 +88,30 @@ function LeftsideBlog() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 mb-4">
-                        <a onClick={navigateToRead}>
-                            <div className="blog__card-div ">
-                                <div className='case-study-card1 h-50 '>
-                                    <img className='blog__card-div-img ' src={BlogDemo} width="100%" alt="" />
-                                    <div id='blog__card-lable' className='blog_card-author-details'>
-                                        <label htmlFor="blog__card-lable" className='blog__card-lable'>Latest Trend</label>
-                                        <h1 className='text-white text-start'>The Future of UI/UX: Predictions and Best Practices htmlFor 2023</h1>
-                                        <div className='blog__card-date-time'>
-                                            <p className=''>By: Author</p>
-                                            <p className=''>Posted by: 20-01-2023</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <Card
+                            image={BlogDemo}
+                            card={navigateToRead}
+                            lable="Latest Trend"
+                            title="The Future of UI/UX: Predictions and Best Practices 2023"
+                            writer="Muhammad farman"
+                            publishdate="20-01-2023"
+                            textClass="text-blue0"
+                            cardbodycss="px-0 py-0"
+                        />
 
-                            </div>
-                        </a>
 
+                    </div>
+                    <div className="col-md-6">
+                        <Card
+                            image={BlogDemo}
+                            card={navigateToRead}
+                            lable="Latest Trend"
+                            title="The Future of UI/UX: Predictions and Best Practices 2023"
+                            writer="Muhammad farman"
+                            publishdate="20-01-2023"
+                            textClass="text-blue0"
+                            cardbodycss="px-0 py-0"
+                        />
                     </div>
 
                 </div>
