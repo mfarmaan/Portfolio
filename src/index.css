@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+#section_admin {
+  background-color: #f2f2f2;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -385,7 +387,7 @@ code {
 }
 
 .admin__header {
-  background-color: #5252fd;
+  background-color: #063658;
   padding: 1rem;
   width: 100%;
 }
@@ -426,59 +428,43 @@ code {
 }
 
 /* admin Dashboard */
-
-.manage__user {
-  cursor: pointer;
-  width: 100%;
-  background: linear-gradient(154.53deg, #5959e9 4.52%, #00005b 90.59%);
-  /* shadow */
+.Admin__dashboard {
+  padding-top: 71px;
+  padding-bottom: 71px;
+}
+.admin__card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2.875rem;
-  gap: 4.8125rem;
-  flex-direction: column;
-  box-shadow: 0rem 7px 26.3px rgba(0, 0, 0, 0.1);
-  border-radius: 3rem;
-  color: #fff;
-  margin-bottom: 24px;
+  padding: 24px;
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 8px;
 }
-.praent-div {
-  margin-top: 3.5rem;
+.icon__section {
+  background: #afafaf;
+  mix-blend-mode: normal;
+  opacity: 0.16;
+  border-radius: 6px;
+  width: 42px;
+  padding: 8px;
 }
-.show_users {
+.admin__card_body-right {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  align-items: flex-end;
+  justify-content: center;
 }
-.show_users h2 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 3rem;
-  line-height: 4.5rem;
-  /* identical to box height */
-
-  color: #ffffff;
-}
-.show__title {
+.admin__card_body {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.show__title h2 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 3rem;
-  /* identical to box height */
+  gap: 8px;
 
-  color: #ffffff;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
+/* end */
 .recent__post__slider {
   margin-bottom: 1.5rem;
 }
@@ -564,7 +550,7 @@ code {
 }
 /* Colors */
 .text-red {
-  color: red !important;
+  color: rgb(184, 48, 48) !important;
 }
 .text-blue0 {
   color: #063658 !important;

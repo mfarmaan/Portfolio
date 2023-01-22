@@ -5,29 +5,10 @@ import Button from '../Admin assets/Button'
 import Header from '../Common/Header'
 
 function ManagePost() {
+
     return (
         <>
 
-
-            <div className='button-margin-top'>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <Search
-                                btntext=" Search..."
-                                class="abcd" />
-                            <p className='my-3'>Total Results: 124</p>
-                        </div>
-                        <div className="col-md-6">
-                            <div className=' d-flex justify-content-end'>
-                                <Button
-                                    btnText="Add New Post"
-                                    className="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div className="my-5">
                 <div className="container">

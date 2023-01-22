@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
 import './Media.css'
@@ -21,6 +22,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/admin" element={<Index />} />
           <Route path="/managepost" element={<Index />} />
+          <Route path="/user/editpost" element={<Index />} />
 
           <Route path="*" element="no page found" />
         </Routes>
