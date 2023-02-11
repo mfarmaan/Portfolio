@@ -1,3 +1,11 @@
+@media (max-width: 1200px) {
+    .case-study-card1 {
+        height: 360px;
+    }
+    .blog_card-author-details {
+        padding: 1.25rem !important;
+    }
+}
 @media (max-width: 450px) {
     * {
         font-size: 0.9rem;

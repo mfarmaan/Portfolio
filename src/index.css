@@ -6,6 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.container {
+  max-width: 1440px;
+}
 #section_admin {
   background-color: #f2f2f2;
 }
@@ -57,22 +60,31 @@ code {
 
   color: #0095ff;
 }
-.blog__card-div {
-  border-radius: 3rem;
-}
+
 .blog__card-div-img {
-  height: 20rem;
-  border-radius: 3rem;
+  height: 100%;
   margin-bottom: 1rem;
+  border-radius: 19.31px;
   object-fit: cover;
+}
+.text-white0 {
+  color: #eaeaea;
+}
+.home__card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 19.31px;
 }
 .blog_card-author-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.625rem;
+  padding: 1.25rem !important;
   gap: 0.5rem;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   z-index: 1;
 }
 
@@ -145,34 +157,36 @@ code {
 }
 
 .case-study-card1 {
-  height: 100%;
+  height: 520px;
   width: 100%;
-  border-radius: 48px;
   transition: 1s all ease-in-out;
   cursor: pointer;
+  position: relative;
 }
 .case-study-card1::before {
   position: absolute;
   content: "";
   height: 100%;
   width: 100%;
-  border-radius: 48px;
-
-  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #3e6aff 100%, rgba(217, 217, 217, 0) 100%);
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0) 10.1%, #151515 91.83%);
+  /* shadow */
+  filter: drop-shadow(0px 7px 26.3px rgba(0, 0, 0, 0.1));
+  border-radius: 19.31px;
   transition: all 1s ease-in-out;
   cursor: pointer;
 }
-.case-study-card1:hover::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  border-radius: 1.1875rem;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48));
-  border-radius: 48px;
+.blog__card-div {
+  position: relative;
+  border-radius: 19.31px;
+}
+.case-study-card1:hover {
+  transform: scale(1.1);
+  transition: all 3s ease-in-out;
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0) 10.1%, #151515 91.83%);
+  /* shadow */
 
-  transition: all 1s ease-in-out;
-  cursor: pointer;
+  filter: drop-shadow(0px 7px 26.3px rgba(0, 0, 0, 0.1));
+  border-radius: 19.31px;
 }
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
@@ -313,6 +327,10 @@ code {
   text-align: start;
   padding: 0px;
   gap: 26px;
+}
+.swiper {
+  border-radius: 19.31px;
+  height: 520px;
 }
 .blog_search-card h1 {
   text-align: start;
