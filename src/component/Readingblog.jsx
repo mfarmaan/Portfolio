@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Giflogo from "../img/lf30_editor_p6rpf9nb.gif";
 import Header from "./Header";
 import Footer from "./Footer";
 import Backto from "../assets/Backto";
 
 function Readingblog() {
+  const location = useLocation();
+
+  const postid = location.search.replace(/[^a-zA-Z0-9 ]/g, "");
+  const [item, setItem] = useState();
+  const [decs, setDecs] = useState();
+
+  useEffect(() => {
+    fetch(`https://blog.uiux.store/wp-json/wp/v2/posts/${postid}`)
+      .then((response) => response.json())
+      .then((data) => setItem(data.title.rendered.replace(/['"]+/g, "")));
+  }, [postid]);
+  useEffect(() => {
+    fetch(`https://blog.uiux.store/wp-json/wp/v2/posts/${postid}`)
+      .then((response) => response.json())
+      .then((data) =>
+        setDecs(data.content.rendered.replace(/[^a-zA-Z0-9 ]/g, ""))
+      );
+  }, [postid]);
+
   return (
     <>
       <Backto />
@@ -32,59 +52,10 @@ function Readingblog() {
         <div className="row justify-content-start ">
           <div className="col-md-11">
             <h1 className="lg-head-2 fs-3 text-start">
-              <span className="fs-3">Experience</span> and Education
+              {JSON.stringify(item)}
+              <span className="fs-3"></span>
             </h1>
-
-            <p className="Read_me-page">
-              Lorem ipsum dolor sit amet consectetur. Et enim posuere semper
-              quis ipsum suspendisse id euismod neque. Risus commodo elementum
-              neque scelerisque lectus nibh dui tortor enim. Nunc malesuada sed
-              morbi egestas cursus amet malesuada facilisi tellus. Id nunc
-              porttitor vel convallis lorem purus sit quam. Fermentum odio amet
-              feugiat eleifend augue vel morbi. Diam lorem vestibulum viverra
-              nisl. Tortor nulla purus vitae aenean tincidunt. Viverra pulvinar
-              mattis lectus ac vivamus. Sit rhoncus magna maecenas volutpat
-              malesuada. Pulvinar integer pellentesque faucibus morbi viverra
-              magna aliquet fringilla. Pellentesque tellus vulputate ac elit
-              eget nam lectus risus mi. Scelerisque quis egestas ultricies neque
-              sed. Risus id sapien eget aliquam. Aenean nisl accumsan interdum
-              tincidunt bibendum sed tincidunt arcu at. Neque dictum vestibulum
-              volutpat in. Sed blandit sit amet at. Et non tellus ipsum a vitae
-              eleifend purus amet quisque. In dictum ipsum sed luctus fringilla
-              pharetra lorem vel. Ut odio morbi eu posuere mi. Lectus mi vivamus
-              elementum nulla netus mattis fermentum. Neque turpis morbi tellus
-              ultrices porttitor purus hac eget placerat. Nisl nulla et in
-              viverra. Feugiat semper orci rhoncus integer volutpat libero nulla
-              nec at. Natoque consectetur semper accumsan a neque. Mauris
-              lobortis non eget dignissim bibendum malesuada senectus. In lectus
-              dignissim arcu nulla facilisi purus ullamcorper maecenas. Quam
-              facilisi euismod viverra dictum quam a nulla. Placerat purus massa
-              suspendisse orci. Nibh ultrices tortor nunc eu. Lorem ipsum dolor
-              sit amet consectetur. Et enim posuere semper quis ipsum
-              suspendisse id euismod neque. Risus commodo elementum neque
-              scelerisque lectus nibh dui tortor enim. Nunc malesuada sed morbi
-              egestas cursus amet malesuada facilisi tellus. Id nunc porttitor
-              vel convallis lorem purus sit quam. Fermentum odio amet feugiat
-              eleifend augue vel morbi. Diam lorem vestibulum viverra nisl.
-              Tortor nulla purus vitae aenean tincidunt. Viverra pulvinar mattis
-              lectus ac vivamus.Sit rhoncus magna maecenas volutpat malesuada.
-              Pulvinar integer pellentesque faucibus morbi viverra magna aliquet
-              fringilla. Pellentesque tellus vulputate ac elit eget nam lectus
-              risus mi. Scelerisque quis egestas ultricies neque sed. Risus id
-              sapien eget aliquam. Aenean nisl accumsan interdum tincidunt
-              bibendum sed tincidunt arcu at. Neque dictum vestibulum volutpat
-              in.Sed blandit sit amet at. Et non tellus ipsum a vitae eleifend
-              purus amet quisque. In dictum ipsum sed luctus fringilla pharetra
-              lorem vel. Ut odio morbi eu posuere mi. Lectus mi vivamus
-              elementum nulla netus mattis fermentum. Neque turpis morbi tellus
-              ultrices porttitor purus hac eget placerat. Nisl nulla et in
-              viverra. Feugiat semper orci rhoncus integer volutpat libero nulla
-              nec at. Natoque consectetur semper accumsan a neque. Mauris
-              lobortis non eget dignissim bibendum malesuada senectus. In lectus
-              dignissim arcu nulla facilisi purus ullamcorper maecenas. Quam
-              facilisi euismod viverra dictum quam a nulla. Placerat purus massa
-              suspendisse orci. Nibh ultrices tortor nunc eu.
-            </p>
+            <p className="Read_me-page">{JSON.stringify(decs)}</p>
           </div>
         </div>
       </div>

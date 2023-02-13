@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import './App.css';
-import './Media.css'
-import './index.css'
-import Layout from './Home/Layout';
-import LeftsideBlog from './assets/LeftsideBlog';
-import Readingblog from './component/Readingblog';
-import Register from './Admin/Register';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import "./Media.css";
+import "./index.css";
+import Layout from "./Home/Layout";
+import LeftsideBlog from "./assets/LeftsideBlog";
+import Readingblog from "./component/Readingblog";
+import Register from "./Admin/Register";
 // import Dashboard from './Admin/Dashboard';
 // import ManagePost from './Admin/pages/ManagePost';
-import Index from './Admin/Index';
+import Index from "./Admin/Index";
 function App() {
   return (
     <>
@@ -27,10 +27,8 @@ function App() {
           <Route path="*" element="no page found" />
         </Routes>
       </Router>
-
     </>
   );
 }
-
 
 export default App;

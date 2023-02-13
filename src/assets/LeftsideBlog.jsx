@@ -19,7 +19,7 @@ function LeftsideBlog() {
 
   const getUser = async () => {
     const api_response = await fetch(
-      "http://localhost/Wordpress/wp-json/wp/v2/posts",
+      "https://blog.uiux.store/wp-json/wp/v2/posts",
       {
         method: "GET",
         headers: {
@@ -152,7 +152,7 @@ function LeftsideBlog() {
               <div className="home__card">
                 <Card
                   image={BlogDemo}
-                  card={() => navigate(`/readingblog?id=${item.id}`)}
+                  card={() => navigate(`/readingblog?${item.id}`)}
                   lable={item.id}
                   title={item.title.rendered}
                   writer="Muhammad farman"
