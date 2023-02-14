@@ -11,11 +11,12 @@ function Readingblog() {
   const postid = location.search.replace(/[^a-zA-Z0-9 ]/g, "");
   const [item, setItem] = useState();
   const [decs, setDecs] = useState();
+  console.log("1234", item);
 
   useEffect(() => {
     fetch(`https://blog.uiux.store/wp-json/wp/v2/posts/${postid}`)
       .then((response) => response.json())
-      .then((data) => setItem(data.title.rendered.replace(/['"]+/g, "")));
+      .then((data) => setItem(data.title.rendered));
   }, [postid]);
   useEffect(() => {
     fetch(`https://blog.uiux.store/wp-json/wp/v2/posts/${postid}`)
@@ -52,10 +53,10 @@ function Readingblog() {
         <div className="row justify-content-start ">
           <div className="col-md-11">
             <h1 className="lg-head-2 fs-3 text-start">
-              {JSON.stringify(item)}
+              {item}
               <span className="fs-3"></span>
             </h1>
-            <p className="Read_me-page">{JSON.stringify(decs)}</p>
+            <p className="Read_me-page">{decs}</p>
           </div>
         </div>
       </div>
