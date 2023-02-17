@@ -7,46 +7,34 @@ import SwiperCore, { Pagination, Navigation } from "swiper/core";
 
 // Import Swiper styles
 import "swiper/css";
+import Loader from "./Loader";
 
 SwiperCore.use([Pagination, Navigation]);
 
 function Blog() {
-  const [btnClicked, setBtnclicked] = useState(0);
+  const [btnClicked, setBtnclicked] = useState(1);
 
-  const btnId = [
-    {
-      id: "1",
-      name: "Andriod Dev",
-    },
-    {
-      id: "2",
-      name: "Innovation",
-    },
-    {
-      id: "3",
-      name: "Design",
-    },
-    {
-      id: "4",
-      name: "web",
-    },
-  ];
+  const [id, setId] = React.useState([]);
 
-  const postdata = [
-    {
-      catagory: "Creative",
-      title: "The I tool that helps remote teams collaborate better",
-    },
-    {
-      catagory: "Inovation",
-      title: "The I tool that helps remote teams collaborate better",
-    },
-    {
-      catagory: "Design",
-      title: "The I tool that helps remote teams collaborate better",
-    },
-  ];
-  console.log(btnId);
+  React.useEffect(() => {
+    // getAllUser();
+    getUser();
+  }, []);
+
+  const getUser = async () => {
+    const api_response = await fetch(
+      "https://blog.uiux.store/wp-json/wp/v2/posts",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const my_user = await api_response.json();
+    setId(my_user);
+  };
+
   return (
     <>
       <section className="my-5 top-section common-margin">
@@ -83,6 +71,8 @@ function Blog() {
                   }}
                   centeredSlides={true}
                   modules={[Autoplay]}
+                  onSlideChange={() => console.log("Slide Change")}
+                  onSwiper={(swiper) => console.log(swiper)}
                 >
                   <SwiperSlide>
                     <div className="Post__card pointer">
@@ -90,7 +80,7 @@ function Blog() {
                         <span>01</span>
                       </div>
                       <div className="post_img">
-                        <img className="img-fluid" src={Demo} alt="" />
+                        <img id="1" className="img-fluid" src={Demo} alt="" />
                       </div>
                       <div className="post_texts">
                         <div className="post_tags">
@@ -106,7 +96,7 @@ function Blog() {
                       </div>
                     </div>
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide id="2">
                     <div className="Post__card pointer">
                       <div className="post_id_slider">
                         <span>01</span>
@@ -128,7 +118,7 @@ function Blog() {
                       </div>
                     </div>
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide id="3">
                     <div className="Post__card pointer">
                       <div className="post_id_slider">
                         <span>01</span>
@@ -151,88 +141,6 @@ function Blog() {
                     </div>
                   </SwiperSlide>
                 </Swiper>
-                {/* <div className="swiper">
-                  <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                      <div className="Post__card">
-                        <div className="post_id_slider">
-                          <span>01</span>
-                        </div>
-                        <div className="post_img">
-                          <img
-                            className="img-fluid"
-                            src="./img/demo_image-1-300x300.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="post_texts">
-                          <div className="post_tags">
-                            <p className="post-tags-lable">Creative </p>
-                            <p className="post-tags-lable">Creative </p>
-                          </div>
-                          <div className="post_title">
-                            <h1 className="post_title_h1">
-                              The I tool that helps remote teams collaborate
-                              better
-                            </h1>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="Post__card">
-                        <div className="post_id_slider">
-                          <span>01</span>
-                        </div>
-                        <div className="post_img">
-                          <img
-                            className="img-fluid"
-                            src="./img/demo_image-1-300x300.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="post_texts">
-                          <div className="post_tags">
-                            <p className="post-tags-lable">Creative </p>
-                            <p className="post-tags-lable">Creative </p>
-                          </div>
-                          <div className="post_title">
-                            <h1 className="post_title_h1">
-                              The I tool that helps remote teams collaborate
-                              better
-                            </h1>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="Post__card">
-                        <div className="post_id_slider">
-                          <span>01</span>
-                        </div>
-                        <div className="post_img">
-                          <img
-                            className="img-fluid"
-                            src="./img/demo_image-1-300x300.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="post_texts">
-                          <div className="post_tags">
-                            <p className="post-tags-lable">Creative </p>
-                            <p className="post-tags-lable">Creative </p>
-                          </div>
-                          <div className="post_title">
-                            <h1 className="post_title_h1">
-                              The I tool that helps remote teams collaborate
-                              better
-                            </h1>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
             <div className="right_imge p-0">
@@ -246,7 +154,6 @@ function Blog() {
           </div>
         </div>
       </section>
-
       <section className="bg-gray-section common-margin">
         <div className="container">
           <div className="row">
@@ -313,7 +220,6 @@ function Blog() {
           </div>
         </div>
       </section>
-
       <section className="common-margin">
         <div className="container">
           <div className="row">
@@ -323,30 +229,33 @@ function Blog() {
               </div>
             </div>
             <div className="col-12 common-margin-heading">
-              <div className="d-flex gap-3">
-                {btnId.map((data) => (
+              <div className="d-flex flex-wrap gap-3">
+                {id.map((data, index) => (
                   <button
+                    key={index}
                     id={data.id}
                     onClick={() => setBtnclicked(data.id)}
                     type="submit"
                     className={
-                      !btnClicked ? "catagory_tabs " : "catagory_tabs active"
+                      btnClicked === data.id
+                        ? "catagory_tabs active "
+                        : "catagory_tabs "
                     }
                   >
-                    {data.name}
+                    {data.categories}
                   </button>
                 ))}
               </div>
             </div>
           </div>
           <div className="row">
-            {postdata.map((postItem) => (
-              <div className=" col-xl-4 col-md-4  mb-4">
+            {id.slice(0, 3).map((postItem) => (
+              <div key={postItem.id} className=" col-xl-4 col-md-4  mb-4">
                 <div className="posts__card">
                   <img src={Demo} alt="" />
                   <div className="post_details">
-                    <p>{postItem.catagory}</p>
-                    <h2>{postItem.title}</h2>
+                    <p>{postItem.id}</p>
+                    <h2>{postItem.title.rendered}</h2>
                   </div>
                 </div>
               </div>
@@ -354,38 +263,93 @@ function Blog() {
           </div>
         </div>
       </section>
-
-      {/* <div classNameName="blog-margin-top">
-        <div classNameName="container">
-          <div classNameName="row align-items-center">
-            <div classNameName="col-md-6">
-              <h3 classNameName="sm-title-1">BLOG</h3>
-              <h2 classNameName="lg-head-bg-title-1 lg-head-title-1">
-                Checkout Some <span>Industrial Trend!</span>
-              </h2>
+      <section className="common-margin bg-gray-section ">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="treaning_section common-margin-heading">
+                <h2>Innovation & Tech</h2>
+              </div>
             </div>
-            <div classNameName="col-md-6">
-              <div classNameName="d-flex justify-content-end">
-                <img src={Giflogo} width="300px" alt="" />
+          </div>
+          <div className="row">
+            <div className=" col-xl-6 col-lg-6  mb-4">
+              <div className="posts__card h-lg">
+                <img src={Demo} alt="" />
+              </div>
+              <div className="post_details-text text-width  ">
+                <p>
+                  <span>Creative</span>
+                  <span>Creative</span>
+                </p>
+                <h3>The I tool that helps remote teams collaborate better</h3>
+              </div>
+            </div>
+            <div className=" col-xl-6 col-lg-6  mb-4">
+              <div className="row ">
+                <div className="col-lg-6 grid-margin ">
+                  <div className="posts__card h-m ">
+                    <img src={Demo} alt="" />
+                  </div>
+                  <div className="post_details-text ">
+                    <p>
+                      <span>Creative</span>
+                      <span>Creative</span>
+                    </p>
+                    <h3>
+                      The I tool that helps remote teams collaborate better
+                    </h3>
+                  </div>
+                </div>
+                <div className="col-lg-6 grid-margin ">
+                  <div className="posts__card  h-m ">
+                    <img src={Demo} alt="" />
+                  </div>
+                  <div className="post_details-text ">
+                    <p>
+                      <span>Creative</span>
+                      <span>Creative</span>
+                    </p>
+                    <h3>
+                      The I tool that helps remote teams collaborate better
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-6 grid-margin ">
+                  <div className="posts__card  h-m ">
+                    <img src={Demo} alt="" />
+                  </div>
+                  <div className="post_details-text ">
+                    <p>
+                      <span>Creative</span>
+                      <span>Creative</span>
+                    </p>
+                    <h3>
+                      The I tool that helps remote teams collaborate better
+                    </h3>
+                  </div>
+                </div>
+                <div className="col-lg-6 grid-margin ">
+                  <div className="posts__card  h-m ">
+                    <img src={Demo} alt="" />
+                  </div>
+                  <div className="post_details-text ">
+                    <p>
+                      <span>Creative</span>
+                      <span>Creative</span>
+                    </p>
+                    <h3>
+                      The I tool that helps remote teams collaborate better
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div> */}
-
-      {/* <div classNameName="container">
-        <div classNameName="row align-items-start">
-
-          <div classNameName="col-md-8">
-            <LeftsideBlog />
-          </div>
-
-          <div classNameName="col-md-4">
-            <Rightsidewiget />
-          </div>
-         
-        </div>
-      </div> */}
+      </section>
     </>
   );
 }

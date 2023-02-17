@@ -122,12 +122,7 @@ h2 {
   margin: 0;
   color: #063658;
 }
-.addmin__active h2 {
-  color: #5252fd;
-}
-h3 {
-  color: #696cff;
-}
+
 h5 {
   font-family: "Helvatica";
   font-style: normal;
@@ -686,13 +681,242 @@ a:hover {
 
   color: #ffffff;
 }
+.h-m {
+  height: 214px !important;
+}
+.h-lg {
+  height: 589px !important;
+}
 
+.grid-margin {
+  margin-bottom: 24px;
+}
+.post_details-text {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.post_details-text p {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+  color: #da0e3f;
+  /* identical to box height */
+}
+.post_details-text h3 {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 146% */
+  margin-bottom: 0;
+  margin-top: 15px;
+  color: #655c5c;
+}
+.text-width {
+  width: 75%;
+}
+
+/* Loader */
+.Overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.loader {
+  position: relative;
+  width: 108px;
+  display: flex;
+  justify-content: space-between;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  background-image: radial-gradient(circle 14px, #0d161b 100%, transparent 0);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  animation: eyeMove 10s infinite, blink 10s infinite;
+}
+@keyframes eyeMove {
+  0%,
+  10% {
+    background-position: 0px 0px;
+  }
+  13%,
+  40% {
+    background-position: -15px 0px;
+  }
+  43%,
+  70% {
+    background-position: 15px 0px;
+  }
+  73%,
+  90% {
+    background-position: 0px 15px;
+  }
+  93%,
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@keyframes blink {
+  0%,
+  10%,
+  12%,
+  20%,
+  22%,
+  40%,
+  42%,
+  60%,
+  62%,
+  70%,
+  72%,
+  90%,
+  92%,
+  98%,
+  100% {
+    height: 48px;
+  }
+  11%,
+  21%,
+  41%,
+  61%,
+  71%,
+  91%,
+  99% {
+    height: 18px;
+  }
+}
+/* 
+.loader {
+  display: block;
+  position: relative;
+  height: 32px;
+  width: 200px;
+  background: #fff;
+  border: 2px solid #fff;
+  color: red;
+  overflow: hidden;
+}
+.loader::before {
+  content: "";
+  background: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  animation: loading 10s linear infinite;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  color: rgb(0, 255, 255);
+  mix-blend-mode: difference;
+  animation: percentage 10s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes percentage {
+  0% {
+    content: "0%";
+  }
+  5% {
+    content: "5%";
+  }
+  10% {
+    content: "10%";
+  }
+  20% {
+    content: "20%";
+  }
+  30% {
+    content: "30%";
+  }
+  40% {
+    content: "40%";
+  }
+  50% {
+    content: "50%";
+  }
+  60% {
+    content: "60%";
+  }
+  70% {
+    content: "70%";
+  }
+  80% {
+    content: "80%";
+  }
+  90% {
+    content: "90%";
+  }
+  95% {
+    content: "95%";
+  }
+  96% {
+    content: "96%";
+  }
+  97% {
+    content: "97%";
+  }
+  98% {
+    content: "98%";
+  }
+  99% {
+    content: "99%";
+  }
+  100% {
+    content: "100%";
+  }
+} */
+
+/* Loader Ebd */
 @media (min-width: 769px) {
   .right_imge_card {
     display: none;
   }
 }
 
+@media (max-width: 990px) {
+  .text-width {
+    width: 100%;
+  }
+  .h-m,
+  .h-lg {
+    height: 464px !important;
+  }
+}
 @media (max-width: 768px) {
   .admin__headers_sec2 p {
     display: none;
@@ -705,6 +929,10 @@ a:hover {
   }
 }
 @media (max-width: 450px) {
+  .h-m,
+  .h-lg {
+    height: 264px !important;
+  }
   .admin__headers h1 {
     font-size: 6vw;
   }
