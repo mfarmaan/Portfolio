@@ -697,6 +697,7 @@ a:hover {
   flex-grow: 0;
 }
 .post_details-text p {
+  margin-bottom: 0;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;

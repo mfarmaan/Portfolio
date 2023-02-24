@@ -4,5 +4,4 @@
 //   reducers: {
 //     // posts: Postslice,
 //   },
-// });
-// export default Store;
+// })
