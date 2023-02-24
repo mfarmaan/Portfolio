@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.6ef8ee6d.css",
-    "main.js": "/Portfolio/static/js/main.94447dbb.js",
-    "static/js/787.f587e8d5.chunk.js": "/Portfolio/static/js/787.f587e8d5.chunk.js",
-    "static/media/blog-demo.png": "/Portfolio/static/media/blog-demo.132d2ad18c984f0c61ee.png",
-    "static/media/Helvetica.ttf": "/Portfolio/static/media/Helvetica.06113bf748ae7dc33e05.ttf",
-    "static/media/Helvetica-Bold.ttf": "/Portfolio/static/media/Helvetica-Bold.ed57aca7292971d8548c.ttf",
-    "static/media/lf30_editor_p6rpf9nb.gif": "/Portfolio/static/media/lf30_editor_p6rpf9nb.8bf708ec7cc4d7ffd482.gif",
-    "static/media/helvetica-light-587ebe5a59211.ttf": "/Portfolio/static/media/helvetica-light-587ebe5a59211.6e816f786a7f97793401.ttf",
-    "static/media/Rectangle 11.png": "/Portfolio/static/media/Rectangle 11.5dddf749ad522ce865fd.png",
-    "static/media/demo_image-1-300x300.jpg": "/Portfolio/static/media/demo_image-1-300x300.85865f41e701b48056d1.jpg",
-    "index.html": "/Portfolio/index.html",
-    "static/media/Rectangle 12.svg": "/Portfolio/static/media/Rectangle 12.20f1704298dae3cc1c5b.svg",
-    "main.6ef8ee6d.css.map": "/Portfolio/static/css/main.6ef8ee6d.css.map",
-    "main.94447dbb.js.map": "/Portfolio/static/js/main.94447dbb.js.map",
-    "787.f587e8d5.chunk.js.map": "/Portfolio/static/js/787.f587e8d5.chunk.js.map"
+    "main.css": "/static/css/main.d6d78eea.css",
+    "main.js": "/static/js/main.188b2422.js",
+    "static/js/787.f587e8d5.chunk.js": "/static/js/787.f587e8d5.chunk.js",
+    "static/media/blog-demo.png": "/static/media/blog-demo.132d2ad18c984f0c61ee.png",
+    "static/media/Helvetica.ttf": "/static/media/Helvetica.06113bf748ae7dc33e05.ttf",
+    "static/media/Helvetica-Bold.ttf": "/static/media/Helvetica-Bold.ed57aca7292971d8548c.ttf",
+    "static/media/lf30_editor_p6rpf9nb.gif": "/static/media/lf30_editor_p6rpf9nb.8bf708ec7cc4d7ffd482.gif",
+    "static/media/helvetica-light-587ebe5a59211.ttf": "/static/media/helvetica-light-587ebe5a59211.6e816f786a7f97793401.ttf",
+    "static/media/Rectangle 11.png": "/static/media/Rectangle 11.5dddf749ad522ce865fd.png",
+    "static/media/demo_image-1-300x300.jpg": "/static/media/demo_image-1-300x300.85865f41e701b48056d1.jpg",
+    "index.html": "/index.html",
+    "static/media/Rectangle 12.svg": "/static/media/Rectangle 12.20f1704298dae3cc1c5b.svg",
+    "main.d6d78eea.css.map": "/static/css/main.d6d78eea.css.map",
+    "main.188b2422.js.map": "/static/js/main.188b2422.js.map",
+    "787.f587e8d5.chunk.js.map": "/static/js/787.f587e8d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ef8ee6d.css",
-    "static/js/main.94447dbb.js"
+    "static/css/main.d6d78eea.css",
+    "static/js/main.188b2422.js"
   ]
 }
