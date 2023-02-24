@@ -7,7 +7,6 @@ import SwiperCore, { Pagination, Navigation } from "swiper/core";
 
 // Import Swiper styles
 import "swiper/css";
-import Loader from "./Loader";
 
 SwiperCore.use([Pagination, Navigation]);
 
