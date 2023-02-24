@@ -12,7 +12,7 @@ function Layout() {
 
   return (
     <>
-      {isLoading == true ? (
+      {isLoading === true ? (
         <Loader background="#000" />
       ) : (
         <>

@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import Giflogo from "../img/lf30_editor_p6rpf9nb.gif";
 import Header from "./Header";
 import Footer from "./Footer";
-import Backto from "../assets/Backto";
 
 function Readingblog() {
   const location = useLocation();
@@ -11,7 +10,6 @@ function Readingblog() {
   const postid = location.search.replace(/[^a-zA-Z0-9 ]/g, "");
   const [item, setItem] = useState();
   const [decs, setDecs] = useState();
-  console.log("1234", item);
 
   useEffect(() => {
     fetch(`https://blog.uiux.store/wp-json/wp/v2/posts/${postid}`)
@@ -21,14 +19,12 @@ function Readingblog() {
   useEffect(() => {
     fetch(`https://blog.uiux.store/wp-json/wp/v2/posts/${postid}`)
       .then((response) => response.json())
-      .then((data) =>
-        setDecs(data.content.rendered.replace(/[^a-zA-Z0-9 ]/g, ""))
-      );
+      .then((data) => setDecs(data.content.rendered));
   }, [postid]);
+  const newdata = decs;
 
   return (
     <>
-      <Backto />
       <Header />
       <div className="blog-margin-top">
         <div className="container">
@@ -56,7 +52,11 @@ function Readingblog() {
               {item}
               <span className="fs-3"></span>
             </h1>
-            <p className="Read_me-page">{decs}</p>
+            <p
+              className="Read_me-page"
+              dangerouslySetInnerHTML={{ __html: newdata }}
+            ></p>
+            <div dangerouslySetInnerHTML={{ __html: newdata }}></div>
           </div>
         </div>
       </div>
